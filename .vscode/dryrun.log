@@ -1,0 +1,10 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/chandrafebrian/Downloads/helm-k8s-deployment-master'
+cd ./backend && npm install
+docker build -t trivia-backend:latest ./backend
+docker tag trivia-backend:latest move4up/trivia-backend:1.0.0
+cd ./frontend && npm install
+docker build -t trivia-frontend:latest ./frontend
+docker tag trivia-frontend:latest move4up/trivia-frontend:1.0.0
+make: Leaving directory `/Users/chandrafebrian/Downloads/helm-k8s-deployment-master'
+ 
